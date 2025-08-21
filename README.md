@@ -1,0 +1,2 @@
+# biome-config
+Biome configuration
