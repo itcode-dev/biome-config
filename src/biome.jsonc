@@ -1,0 +1,898 @@
+// biome-ignore-all assist/source/useSortedKeys: keep protect document rules sorting
+{
+	"$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"a11y": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow access attribute
+				"noAccessKey": "error",
+				// disallow access mismatch
+				"noAriaHiddenOnFocusable": "error",
+				// disallow unsupported aria-*
+				"noAriaUnsupportedElements": "error",
+				// disallow autofocus attribute
+				"noAutofocus": "error",
+				// disallow distracting DOM
+				"noDistractingElements": "error",
+				// scope attribute only use in th
+				"noHeaderScope": "error",
+				// interactive DOM don't have non-interactive role
+				"noInteractiveElementToNoninteractiveRole": "error",
+				// label must be pair control DOM
+				"noLabelWithoutControl": "error",
+				// disallow interaction of non-interactive DOM
+				"noNoninteractiveElementInteractions": "error",
+				// reverse noInteractiveElementToNoninteractiveRole
+				"noNoninteractiveElementToInteractiveRole": "error",
+				// don't have tab-index of non-interaction DOM
+				"noNoninteractiveTabindex": "error",
+				// tab-index must be negative
+				"noPositiveTabindex": "error",
+				// alt value does not contain any specific words
+				"noRedundantAlt": "error",
+				// role value does not contain same element name
+				"noRedundantRoles": "error",
+				// static DOM has not interactions
+				"noStaticElementInteractions": "error",
+				// SVG must have a title
+				"noSvgWithoutTitle": "error",
+				// alt must have a text
+				"useAltText": "error",
+				// anchor must have a content
+				"useAnchorContent": "error",
+				// aria-activedescendant must be with a tab-index
+				"useAriaActivedescendantWithTabindex": "error",
+				// use role based aria
+				"useAriaPropsForRole": "error",
+				// aria must have supported role
+				"useAriaPropsSupportedByRole": "error",
+				// button must have a type
+				"useButtonType": "error",
+				// have interaction, can interactive
+				"useFocusableInteractive": "error",
+				// heading must have a content
+				"useHeadingContent": "error",
+				// html must have a lang attribute
+				"useHtmlLang": "error",
+				// iframe must have a title
+				"useIframeTitle": "error",
+				// onClick can use alone
+				"useKeyWithClickEvents": "off",
+				// mouse event can use alone
+				"useKeyWithMouseEvents": "off",
+				// media no need caption
+				"useMediaCaption": "off",
+				// prefer semantic tag
+				"useSemanticElements": "error",
+				// use valid anchor
+				"useValidAnchor": "error",
+				// use valid aria attribute
+				"useValidAriaProps": "error",
+				// use valid aria role
+				"useValidAriaRole": "error",
+				// use valid aria value
+				"useValidAriaValues": "error",
+				// use valid autocomplete value
+				"useValidAutocomplete": "error",
+				// use valid language
+				"useValidLang": "error",
+				//
+				// ==============================
+				// CSS
+				// ==============================
+				//
+				// font-family must have geniric font
+				"useGenericFontNames": "error"
+			},
+			"complexity": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow adjacent space in regex
+				"noAdjacentSpacesInRegex": "error",
+				// disallow argument
+				"noArguments": "error",
+				// disallow banned type
+				"noBannedTypes": "error",
+				// disallow comma operator
+				"noCommaOperator": "error",
+				// disallow empty type or interface
+				"noEmptyTypeParameters": "error",
+				// save callback hell
+				"noExcessiveCognitiveComplexity": "error",
+				// no district fuction line
+				"noExcessiveLinesPerFunction": "off",
+				// no district test depth
+				"noExcessiveNestedTestSuites": "off",
+				// disallow unnecessary boolean cast
+				"noExtraBooleanCast": "error",
+				// disallow unnecessary flat map
+				"noFlatMapIdentity": "error",
+				// disallow unnecessary for-each
+				"noForEach": "error",
+				// disallow shorthand
+				"noImplicitCoercions": "error",
+				// class does not have only static member
+				"noStaticOnlyClass": "error",
+				// disallow this, super in static method
+				"noThisInStatic": "error",
+				// disallow unnecessary catch
+				"noUselessCatch": "error",
+				// disallow unnecessary constructor
+				"noUselessConstructor": "error",
+				// disallow unnecessary continue
+				"noUselessContinue": "error",
+				// disallow empty export
+				"noUselessEmptyExport": "error",
+				// disallow unnecessary escape(\) in regex
+				"noUselessEscapeInRegex": "error",
+				// disallow unnecessary fragment
+				"noUselessFragments": "error",
+				// disallow unnecessary label
+				"noUselessLabel": "error",
+				// disallow unnecessary block
+				"noUselessLoneBlockStatements": "error",
+				// disallow unnecessary rename
+				"noUselessRename": "error",
+				// disallow unnecessary string concat
+				"noUselessStringConcat": "error",
+				// disallow unnecessary String.raw
+				"noUselessStringRaw": "error",
+				// disallow unnecessary case block,
+				"noUselessSwitchCase": "error",
+				// disallow unnecessary ternary operation
+				"noUselessTernary": "error",
+				// disallow unnecessary this alias
+				"noUselessThisAlias": "error",
+				// disallow unnecessary type constraint
+				"noUselessTypeConstraint": "error",
+				// disallow unnecessary undefined init
+				"noUselessUndefinedInitialization": "error",
+				// disallow void
+				"noVoid": "error",
+				// prefer arrow function
+				"useArrowFunction": "error",
+				// prefer Date.now()
+				"useDateNow": "error",
+				// prefer .flatMap()
+				"useFlatMap": "error",
+				// prefer .indexOf()
+				"useIndexOf": "error",
+				// prefer literal key
+				"useLiteralKeys": "error",
+				// prefer numeric literal
+				"useNumericLiterals": "error",
+				// prefer optional chain
+				"useOptionalChain": "error",
+				// prefer regex literal
+				"useRegexLiterals": "error",
+				// prefer simple number
+				"useSimpleNumberKeys": "error",
+				// prefer simplify logic
+				"useSimplifiedLogicExpression": "error",
+				// prefer while
+				"useWhile": "error",
+				//
+				// ==============================
+				// CSS
+				// ==============================
+				//
+				// disallow !important
+				"noImportantStyles": "error"
+			},
+			"correctness": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow children property
+				"noChildrenProp": "error",
+				// disallow const assign
+				"noConstAssign": "error",
+				// disallow constant condition
+				"noConstantCondition": "error",
+				// disallow constant Math.max or Math.min
+				"noConstantMathMinMaxClamp": "error",
+				// disallow return in constructor
+				"noConstructorReturn": "error",
+				// disallow empty class in regex
+				"noEmptyCharacterClassInRegex": "error",
+				// disallow empty destructor
+				"noEmptyPattern": "error",
+				// disallow __dirname, __filename in global scope
+				"noGlobalDirnameFilename": "error",
+				// disallow calling global object
+				"noGlobalObjectCalls": "error",
+				// disallow inner declaration
+				"noInnerDeclarations": "error",
+				// disallow builtin initialize
+				"noInvalidBuiltinInstantiation": "error",
+				// disallow use invalid super
+				"noInvalidConstructorSuper": "error",
+				// disallow use before declaration
+				"noInvalidUseBeforeDeclaration": "error",
+				// disallow nested component
+				"noNestedComponentDefinitions": "error",
+				// disallow nodejs module
+				"noNodejsModules": "error",
+				// only escape in octal decimal
+				"noNonoctalDecimalEscape": "error",
+				// disallow precision loss
+				"noPrecisionLoss": "error",
+				// disallow private import
+				"noPrivateImports": "error",
+				// disallow global process
+				"noProcessGlobal": "error",
+				// disallow assign property
+				"noReactPropAssignments": "error",
+				// disallow assign value
+				"noRenderReturnValue": "error",
+				// disallow restrict element
+				"noRestrictedElements": "error",
+				// how can I assign me?
+				"noSelfAssign": "error",
+				// setter can't return something
+				"noSetterReturn": "error",
+				// disallow destructed property in solid.js
+				"noSolidDestructuredProps": "error",
+				// disallow mismatch case
+				"noStringCaseMismatch": "error",
+				// disallow declaration in switch
+				"noSwitchDeclarations": "error",
+				// disallow undeclared dependency
+				"noUndeclaredDependencies": "error",
+				// prevent use undeclared val
+				"noUndeclaredVariables": "error",
+				// to reach out to you
+				"noUnreachable": "error",
+				// to reach out to super
+				"noUnreachableSuper": "error",
+				// disallow unsafe finally
+				"noUnsafeFinally": "error",
+				// disallow unsafe optional chain
+				"noUnsafeOptionalChaining": "error",
+				// parameter must be used
+				"noUnusedFunctionParameters": "error",
+				// import too
+				"noUnusedImports": "error",
+				// label also too
+				"noUnusedLabels": "error",
+				// private member must be used
+				"noUnusedPrivateClassMembers": "error",
+				// variable must be used
+				"noUnusedVariables": "error",
+				// void can't have children
+				"noVoidElementsWithChildren": "error",
+				// how do voie has return?
+				"noVoidTypeReturn": "error",
+				// if hook used, must be regist
+				"useExhaustiveDependencies": "error",
+				// hooks must be written top scope
+				"useHookAtTopLevel": "error",
+				// i don't want import extension
+				"useImportExtensions": "off",
+				// NaN check with isNaN()
+				"useIsNan": "error",
+				// Enforces attribute when json import
+				"useJsonImportAttributes": "error",
+				// when in iterable, must be use key
+				"useJsxKeyInIterable": "error",
+				// use radix in parseInt()
+				"useParseIntRadix": "error",
+				// must use one * in comment
+				"useSingleJsDocAsterisk": "error",
+				// free use id
+				"useUniqueElementIds": "off",
+				// wrong way your for
+				"useValidForDirection": "error",
+				// must be use valid typeof
+				"useValidTypeof": "error",
+				// use yield
+				"useYield": "error",
+				//
+				// ==============================
+				// CSS
+				// ==============================
+				//
+				// disallow invalid linear-gradient direction
+				"noInvalidDirectionInLinearGradient": "error",
+				// disallow invalid grid area
+				"noInvalidGridAreas": "error",
+				// @import must be in top
+				"noInvalidPositionAtImportRule": "error",
+				// disallow missing var func
+				"noMissingVarFunction": "error",
+				// disallow stranger function
+				"noUnknownFunction": "error",
+				// disallow unknown media query
+				"noUnknownMediaFeatureName": "error",
+				// disallow unknown property
+				"noUnknownProperty": "error",
+				// disallow unknown pseudo class
+				"noUnknownPseudoClass": "error",
+				// disallow unknown pseudo element
+				"noUnknownPseudoElement": "error",
+				// disallow selector
+				"noUnknownTypeSelector": "error",
+				// disallow unknown unit
+				"noUnknownUnit": "error",
+				// disallow unmatch anb selector
+				"noUnmatchableAnbSelector": "error"
+			},
+			"nursery": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow alone promise
+				"noFloatingPromises": "error",
+				// disallow import cycle
+				"noImportCycles": "error",
+				// no promise you can't keep
+				"noMisusedPromises": "error",
+				// client component can't has async in Next.js
+				"noNextAsyncClientComponent": "error",
+				// don't use non-null assertions after optional chain
+				"noNonNullAssertedOptionalChain": "error",
+				// don't use quik in visible task
+				"noQwikUseVisibleTask": "error",
+				// don't use secret data
+				"noSecrets": "error",
+				// don't use shadow variable
+				"noShadow": "error",
+				// don't use unnecessary condition
+				"noUnnecessaryConditions": "error",
+				// disallow unresolved import
+				"noUnresolvedImports": "error",
+				// disallow unnecessary undefined
+				"noUselessUndefined": "error",
+				// data options must be declared in function at vue
+				"noVueDataObjectDeclaration": "error",
+				// disallow reserved key in vue
+				"noVueReservedKeys": "error",
+				// disallow reserved property in vue
+				"noVueReservedProps": "error",
+				// anchor must has href
+				"useAnchorHref": "error",
+				// type definition must be consistently
+				"useConsistentTypeDefinitions": "error",
+				// switch must handle all cases
+				"useExhaustiveSwitchCases": "error",
+				// type is explictit
+				"useExplicitType": "error",
+				// img has size or not
+				"useImageSize": "off",
+				// parameter size no limit
+				"useMaxParams": "off",
+				// use classlist in qwik
+				"useQwikClasslist": "error",
+				// react component must be functional
+				"useReactFunctionComponents": "error",
+				// class sort
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {
+						"attributes": ["classList"],
+						"functions": ["clsx", "cva", "cn", "tw", "tw.*"]
+					}
+				}
+			},
+			"performance": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow spread in reduce
+				"noAccumulatingSpread": "error",
+				// await disallow in loop
+				"noAwaitInLoops": "error",
+				// disallow barrel
+				"noBarrelFile": "error",
+				// disallow delete keyword
+				"noDelete": "error",
+				// don't access dynamic to namespace import
+				"noDynamicNamespaceImportAccess": "error",
+				// don't use img in Next.js
+				"noImgElement": "error",
+				// disallow namespace import
+				"noNamespaceImport": "error",
+				// don't reexport all
+				"noReExportAll": "error",
+				// polyfill.io already use in Next.js
+				"noUnwantedPolyfillio": "error",
+				// prefer preconnect in Google Fonts
+				"useGoogleFontPreconnect": "error",
+				// use <For /> in solid.js
+				"useSolidForComponent": "error",
+				// regex sign in top
+				"useTopLevelRegex": "error"
+			},
+			"security": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// blank must be with noopener
+				"noBlankTarget": "error",
+				// don't use this
+				"noDangerouslySetInnerHtml": "error",
+				// children also can't use
+				"noDangerouslySetInnerHtmlWithChildren": "error",
+				// why use eval?
+				"noGlobalEval": "error"
+			},
+			"style": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// don't use CommonJS
+				"noCommonJs": "error",
+				// don't hate default export
+				"noDefaultExport": "off",
+				// disallow callback in async test or hook
+				"noDoneCallback": "error",
+				// i think enum is not bad
+				"noEnum": "off",
+				// disallow bypass
+				"noExportedImports": "error",
+				// disallow head in Next.js
+				"noHeadElement": "error",
+				// boolean is implicit
+				"noImplicitBoolean": "off",
+				// disallow inferrable type
+				"noInferrableTypes": "error",
+				// magin is gone
+				"noMagicNumbers": "error",
+				// disallow namespace
+				"noNamespace": "error",
+				// negative to negative is positive
+				"noNegationElse": "error",
+				// no ternaries
+				"noNestedTernary": "error",
+				// disallow non-null assertion
+				"noNonNullAssertion": "error",
+				// disallow function's parameter assign
+				"noParameterAssign": "error",
+				// class parameter explicit
+				"noParameterProperties": "error",
+				// no we need this
+				"noProcessEnv": "off",
+				// disallow globals
+				"noRestrictedGlobals": "error",
+				// restrict import need overrides
+				"noRestrictedImports": "error",
+				// restrict type
+				"noRestrictedTypes": "error",
+				// yes shouty const
+				"noShoutyConstants": "off",
+				// preter slice()
+				"noSubstr": "error",
+				// disallow unnecessary teplate literal
+				"noUnusedTemplateLiteral": "error",
+				// disallow unnecessary else
+				"noUselessElse": "error",
+				// execute order 66
+				"noYodaExpression": "error",
+				// perfer array literal
+				"useArrayLiterals": "error",
+				// we don't need
+				"useAsConstAssertion": "off",
+				// choice is yours
+				"useAtIndex": "off",
+				// must use block
+				"useBlockStatements": "error",
+				// allow collapsed else if
+				"useCollapsedElseIf": "error",
+				// allow collapsed if
+				"useCollapsedIf": "error",
+				// we like multiple export
+				"useComponentExportOnlyModules": "off",
+				// prefer consistent array type
+				"useConsistentArrayType": "error",
+				// buildin use new
+				"useConsistentBuiltinInstantiation": "error",
+				// use consistent curly brace
+				"useConsistentCurlyBraces": "error",
+				// class accessbility use all or never
+				"useConsistentMemberAccessibility": {
+					"level": "error",
+					"options": {
+						"accessibility": "explicit"
+					}
+				},
+				// use consistent object difinition
+				"useConsistentObjectDefinitions": {
+					"level": "error",
+					"options": {
+						"syntax": "shorthand"
+					}
+				},
+				// prefer const
+				"useConst": "error",
+				// default parameter must be last
+				"useDefaultParameterLast": "error",
+				// switch must has default case
+				"useDefaultSwitchClause": "error",
+				// use enum init
+				"useEnumInitializers": "error",
+				// length check explicit
+				"useExplicitLengthCheck": "error",
+				// perfer exponential operator
+				"useExponentiationOperator": "error",
+				// export must be last
+				"useExportsLast": "error",
+				// prefer export with type
+				"useExportType": "error",
+				// filename convention?
+				"useFilenamingConvention": "off",
+				// perfer for of
+				"useForOf": "error",
+				// prefer <></>
+				"useFragmentSyntax": "error",
+				// accessor must be pair
+				"useGroupedAccessorPairs": "error",
+				// perfer import type
+				"useImportType": "error",
+				// use literal enum member
+				"useLiteralEnumMembers": "error",
+				// use naming convention
+				"useNamingConvention": "error",
+				// use node assert strict
+				"useNodeAssertStrict": "error",
+				// use node: builtin module
+				"useNodejsImportProtocol": "error",
+				// prefer Number.parseInt()
+				"useNumberNamespace": "error",
+				// number separators too verbose
+				"useNumericSeparators": "off",
+				// prefer object spread
+				"useObjectSpread": "error",
+				// prefer readonly if not changed
+				"useReadonlyClassProperties": "error",
+				// dom must be closed self
+				"useSelfClosingElements": "error",
+				// prefer short assign
+				"useShorthandAssign": "error",
+				// prefer short function type
+				"useShorthandFunctionType": "error",
+				// prefer single line when delcare var
+				"useSingleVarDeclarator": "error",
+				// symbom() must have parameter
+				"useSymbolDescription": "error",
+				// prefer template literal
+				"useTemplate": "error",
+				// perfer error use new
+				"useThrowNewError": "error",
+				// only throw error
+				"useThrowOnlyError": "error",
+				// prefer trimStart() or trimEnd()
+				"useTrimStartEnd": "error",
+				// i don't care unified
+				"useUnifiedTypeSignatures": "off",
+				//
+				// ==============================
+				// CSS
+				// ==============================
+				//
+				// specific is asc
+				"noDescendingSpecificity": "error",
+				// disallow @value
+				"noValueAtRule": "error"
+			},
+			"suspicious": {
+				//
+				// ==============================
+				// JavaScript
+				// ==============================
+				//
+				// disallow alert
+				"noAlert": "error",
+				// prefer standard constants
+				"noApproximativeNumericConstant": "error",
+				// disallow key to array index
+				"noArrayIndexKey": "error",
+				// disallow assign in expressions
+				"noAssignInExpressions": "error",
+				// disallow async promise executor
+				"noAsyncPromiseExecutor": "error",
+				// disallow bitwise operator
+				"noBitwiseOperators": "error",
+				// disallow catch assign
+				"noCatchAssign": "error",
+				// class assign too
+				"noClassAssign": "error",
+				// no comment text in JSX
+				"noCommentText": "error",
+				// disallow compare -0
+				"noCompareNegZero": "error",
+				// disallow confuse label
+				"noConfusingLabels": "error",
+				// disallow confuse void type
+				"noConfusingVoidType": "error",
+				// disallow console
+				"noConsole": "error",
+				// disallow const enum
+				"noConstEnum": "error",
+				// disallow static expression
+				"noConstantBinaryExpressions": "error",
+				// disallow control char in regex
+				"noControlCharactersInRegex": "error",
+				// disallow debugger
+				"noDebugger": "error",
+				// prefer cookieStore
+				"noDocumentCookie": "error",
+				// prevent import Document outside in Next.js
+				"noDocumentImportInPage": "error",
+				// prefer ===
+				"noDoubleEquals": "error",
+				// disallow duplicated case
+				"noDuplicateCase": "error",
+				// disallow duplicated member
+				"noDuplicateClassMembers": "error",
+				// disallow duplicated else if
+				"noDuplicateElseIf": "error",
+				// disallow duplicated JSX property
+				"noDuplicateJsxProps": "error",
+				// disallow duplicated object key
+				"noDuplicateObjectKeys": "error",
+				// disallow duplicated parameter
+				"noDuplicateParameters": "error",
+				// disallow duplicated test hook
+				"noDuplicateTestHooks": "error",
+				// disallow empty block
+				"noEmptyBlockStatements": "error",
+				// plz delete if empty interface
+				"noEmptyInterface": "error",
+				// disallow evolve any type
+				"noEvolvingTypes": "error",
+				// disallow any type
+				"noExplicitAny": "error",
+				// disallow export in test
+				"noExportsInTest": "error",
+				// prevent invalid !
+				"noExtraNonNullAssertion": "error",
+				// disallow fallthrough in case
+				"noFallthroughSwitchClause": "error",
+				// test hate many focus
+				"noFocusedTests": "error",
+				// disallow function reassign
+				"noFunctionAssign": "error",
+				// disallow global reassign
+				"noGlobalAssign": "error",
+				// prefer Number.isFinite()
+				"noGlobalIsFinite": "error",
+				// prefer Number.isNaN()
+				"noGlobalIsNan": "error",
+				// disallow Head in Next.js Document
+				"noHeadImportInDocument": "error",
+				// disallow implicit any type
+				"noImplicitAnyLet": "error",
+				// disallow import bind assign
+				"noImportAssign": "error",
+				// only use regular whitespace
+				"noIrregularWhitespace": "error",
+				// disallow variable label
+				"noLabelVar": "error",
+				// disallow misleading char
+				"noMisleadingCharacterClass": "error",
+				// proper usage new(), constructor
+				"noMisleadingInstantiator": "error",
+				// disallow misplace test assert
+				"noMisplacedAssertion": "error",
+				// disallow shorthand assign
+				"noMisrefactoredShorthandAssign": "error",
+				// disallow octal escape
+				"noOctalEscape": "error",
+				// disallow Object.prototype
+				"noPrototypeBuiltins": "error",
+				// useless in react
+				"noReactSpecificProps": "off",
+				// disallow redeclare in same scope
+				"noRedeclare": "error",
+				// disallow redundant use strict
+				"noRedundantUseStrict": "error",
+				// disallow compare self
+				"noSelfCompare": "error",
+				// disallow shadow restricted name
+				"noShadowRestrictedNames": "error",
+				// can't skip the test and youtube ads
+				"noSkippedTests": "error",
+				// disallow sparse array
+				"noSparseArray": "error",
+				// disallow semi in JSX tag
+				"noSuspiciousSemicolonInJsx": "error",
+				// disallow template literal in regular string
+				"noTemplateCurlyInString": "error",
+				// disallow then property
+				"noThenProperty": "error",
+				// disallow @ts-ignore
+				"noTsIgnore": "error",
+				// disallow use before unassigned
+				"noUnassignedVariables": "error",
+				// disallow declaration merge
+				"noUnsafeDeclarationMerging": "error",
+				// disallow unsafe negation
+				"noUnsafeNegation": "error",
+				// disallow unnecessary escape in string
+				"noUselessEscapeInString": "error",
+				// disallow unnecessary backreferences in regex
+				"noUselessRegexBackrefs": "error",
+				// still use var?
+				"noVar": "error",
+				// life is alone
+				"noWith": "error",
+				// overload sign must be pair
+				"useAdjacentOverloadSignatures": "error",
+				// await is good
+				"useAwait": "error",
+				// default case is always last
+				"useDefaultSwitchClauseLast": "error",
+				// throw error must has message
+				"useErrorMessage": "error",
+				// getter must has return value
+				"useGetterReturn": "error",
+				// prefer display strategy in font
+				"useGoogleFontDisplay": "error",
+				// for-in loop need if check
+				"useGuardForIn": "error",
+				// prefer Array.isArray()
+				"useIsArray": "error",
+				// iterable callback must has return
+				"useIterableCallbackReturn": "error",
+				// namespace always above module
+				"useNamespaceKeyword": "error",
+				// toFixed() must has digit
+				"useNumberToFixedDigitsArgument": "error",
+				// prefer static Response
+				"useStaticResponseMethods": "error",
+				// prefer strict mode
+				"useStrictMode": "error",
+				//
+				// ==============================
+				// CSS
+				// ==============================
+				//
+				// disallow duplicated @import
+				"noDuplicateAtImportRules": "error",
+				// custom property always unique
+				"noDuplicateCustomProperties": "error",
+				// you already use that font
+				"noDuplicateFontNames": "error",
+				// disallow duplicated property
+				"noDuplicateProperties": "error",
+				// disallow duplicated keyframes
+				"noDuplicateSelectorsKeyframeBlock": "error",
+				// empty block? why?
+				"noEmptyBlock": "error",
+				// disallow !important in keyframes
+				"noImportantInKeyframe": "error",
+				// disallow shorthant property override
+				"noShorthandPropertyOverrides": "error",
+				// who are rule?
+				"noUnknownAtRules": "error",
+				//
+				// ==============================
+				// JSON
+				// ==============================
+				//
+				// files.includes first item can't use !(glob)
+				"noBiomeFirstException": "error",
+				// disallow fix specific file
+				"noQuickfixBiome": "error",
+				// use ignore folder
+				"useBiomeIgnoreFolder": "error"
+			}
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				// use organize imports in JavaScript like
+				"organizeImports": "on",
+				// use sort attribute in JSX or TSX
+				"useSortedAttributes": "on",
+				// use sort keys in JSON
+				"useSortedKeys": "on",
+				// use sort properties in CSS
+				"useSortedProperties": "on"
+			}
+		}
+	},
+	"formatter": {
+		// 기본 포맷터 활성화
+		"enabled": true,
+		// 전체 파일 대상
+		"includes": ["**"],
+		// tab indent
+		"indentStyle": "tab",
+		// tab 크기 4
+		"indentWidth": 4,
+		// LF
+		"lineEnding": "lf",
+		// 라인 너비
+		"lineWidth": 128,
+		// HTML 속성 포지셔닝
+		"attributePosition": "auto",
+		// 중괄호 내부 공백 추가
+		"bracketSpacing": true,
+		// 배열 및 객체 자동 확장
+		"expand": "auto",
+		// .editorconfig 미사용
+		"useEditorconfig": false
+	},
+	"javascript": {
+		"parser": {
+			// 데코레이터 허용
+			"unsafeParameterDecoratorsEnabled": true,
+			// JSX는 JSX 파일에서만 허용
+			"jsxEverywhere": false
+		},
+		"globals": ["describe", "it", "expect"],
+		"formatter": {
+			// 싱글 따옴표
+			"quoteStyle": "single",
+			// JSX 더블 따옴표
+			"jsxQuoteStyle": "double",
+			// 객체 키 따옴표는 필요할 때만 적용
+			"quoteProperties": "asNeeded",
+			// 후행 쉼표 제거
+			"trailingCommas": "none",
+			// 세미콜론 강제
+			"semicolons": "always",
+			// 애로우 메서드에서 파라미터에 항상 괄표 표기
+			"arrowParentheses": "always",
+			// 멀티 라인의 JSX 브라켓은 새 줄에서 close
+			"bracketSameLine": false,
+			// 중괄호 공백 추가
+			"bracketSpacing": true,
+			// JSX 속성 자동 포지셔닝
+			"attributePosition": "auto",
+			// 줄바꿈 시 연산자 후위로 배치
+			"operatorLinebreak": "after"
+		},
+		// JSX 변환 가정하지 않음
+		"jsxRuntime": "transparent"
+	},
+	"json": {
+		"parser": {
+			// 주석 허용
+			"allowComments": true,
+			// 후행 쉼표 금지
+			"allowTrailingCommas": false
+		},
+		"formatter": {
+			// 후행 쉼표 제거
+			"trailingCommas": "none",
+			// 중괄호 공백 추가
+			"bracketSpacing": true,
+			// 배열 및 객체 자동 확장
+			"expand": "auto"
+		}
+	},
+	"css": {
+		"parser": {
+			// CSS Module 허용
+			"cssModules": true
+		},
+		"formatter": {
+			// 쌍따옴표
+			"quoteStyle": "double"
+		}
+	}
+}

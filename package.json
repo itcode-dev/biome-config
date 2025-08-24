@@ -1,0 +1,35 @@
+{
+	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
+	"contributors": ["itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"],
+	"description": "@itcode.dev biome config",
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"exports": {
+		".": "./src/biome.jsonc"
+	},
+	"files": ["src/*.jsonc"],
+	"homepage": "https://github.com/itcode-dev/biome-config",
+	"keywords": ["biome", "config", "lint", "formatter"],
+	"license": "Apache-2.0",
+	"main": "src/biome.jsonc",
+	"name": "@itcode-dev/biome-config",
+	"packageManager": "pnpm@10.15.0",
+	"peerDependencies": {
+		"@biomejs/biome": "^2.2.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itcode-dev/biome-config.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"version": "1.0.0"
+}
