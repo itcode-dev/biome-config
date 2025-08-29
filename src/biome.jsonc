@@ -1,6 +1,15 @@
 // biome-ignore-all assist/source/useSortedKeys: keep protect document rules sorting
 {
-	"$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+	"files": {
+		"includes": [
+			"**/*.{js,jsx,ts,tsx,json,md,mdx,yml,yaml,html,css,scss,sass}",
+			"!**/node_modules",
+			"!**/.next",
+			"!**/.nx",
+			"!**/.vercel"
+		]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
@@ -26,8 +35,8 @@
 				"noInteractiveElementToNoninteractiveRole": "error",
 				// label must be pair control DOM
 				"noLabelWithoutControl": "error",
-				// disallow interaction of non-interactive DOM
-				"noNoninteractiveElementInteractions": "error",
+				// free for interaction to div
+				"noNoninteractiveElementInteractions": "off",
 				// reverse noInteractiveElementToNoninteractiveRole
 				"noNoninteractiveElementToInteractiveRole": "error",
 				// don't have tab-index of non-interaction DOM
@@ -38,10 +47,10 @@
 				"noRedundantAlt": "error",
 				// role value does not contain same element name
 				"noRedundantRoles": "error",
-				// static DOM has not interactions
-				"noStaticElementInteractions": "error",
-				// SVG must have a title
-				"noSvgWithoutTitle": "error",
+				// static DOM has interactions
+				"noStaticElementInteractions": "off",
+				// too verbose
+				"noSvgWithoutTitle": "off",
 				// alt must have a text
 				"useAltText": "error",
 				// anchor must have a content
@@ -116,8 +125,8 @@
 				"noExtraBooleanCast": "error",
 				// disallow unnecessary flat map
 				"noFlatMapIdentity": "error",
-				// disallow unnecessary for-each
-				"noForEach": "error",
+				// forEach helpful
+				"noForEach": "off",
 				// disallow shorthand
 				"noImplicitCoercions": "error",
 				// class does not have only static member
@@ -222,8 +231,8 @@
 				"noInvalidUseBeforeDeclaration": "error",
 				// disallow nested component
 				"noNestedComponentDefinitions": "error",
-				// disallow nodejs module
-				"noNodejsModules": "error",
+				// js module is need
+				"noNodejsModules": "off",
 				// only escape in octal decimal
 				"noNonoctalDecimalEscape": "error",
 				// disallow precision loss
@@ -261,7 +270,11 @@
 				// disallow unsafe optional chain
 				"noUnsafeOptionalChaining": "error",
 				// parameter must be used
-				"noUnusedFunctionParameters": "error",
+				"noUnusedFunctionParameters": {
+					"fix": "safe",
+					"level": "error",
+					"options": {}
+				},
 				// import too
 				"noUnusedImports": "error",
 				// label also too
@@ -346,12 +359,12 @@
 				"noNonNullAssertedOptionalChain": "error",
 				// don't use quik in visible task
 				"noQwikUseVisibleTask": "error",
-				// don't use secret data
-				"noSecrets": "error",
+				// too annoying
+				"noSecrets": "off",
 				// don't use shadow variable
 				"noShadow": "error",
-				// don't use unnecessary condition
-				"noUnnecessaryConditions": "error",
+				// working weird
+				"noUnnecessaryConditions": "off",
 				// disallow unresolved import
 				"noUnresolvedImports": "error",
 				// disallow unnecessary undefined
@@ -368,8 +381,8 @@
 				"useConsistentTypeDefinitions": "error",
 				// switch must handle all cases
 				"useExhaustiveSwitchCases": "error",
-				// type is explictit
-				"useExplicitType": "error",
+				// allow implicit
+				"useExplicitType": "off",
 				// img has size or not
 				"useImageSize": "off",
 				// parameter size no limit
@@ -398,8 +411,8 @@
 				"noAccumulatingSpread": "error",
 				// await disallow in loop
 				"noAwaitInLoops": "error",
-				// disallow barrel
-				"noBarrelFile": "error",
+				// use barrel
+				"noBarrelFile": "off",
 				// disallow delete keyword
 				"noDelete": "error",
 				// don't access dynamic to namespace import
@@ -408,14 +421,14 @@
 				"noImgElement": "error",
 				// disallow namespace import
 				"noNamespaceImport": "error",
-				// don't reexport all
-				"noReExportAll": "error",
+				// need reexport
+				"noReExportAll": "off",
 				// polyfill.io already use in Next.js
 				"noUnwantedPolyfillio": "error",
 				// prefer preconnect in Google Fonts
 				"useGoogleFontPreconnect": "error",
-				// use <For /> in solid.js
-				"useSolidForComponent": "error",
+				// use only solid
+				"useSolidForComponent": "off",
 				// regex sign in top
 				"useTopLevelRegex": "error"
 			},
@@ -448,16 +461,16 @@
 				"noDoneCallback": "error",
 				// i think enum is not bad
 				"noEnum": "off",
-				// disallow bypass
-				"noExportedImports": "error",
+				// need bypass
+				"noExportedImports": "off",
 				// disallow head in Next.js
 				"noHeadElement": "error",
 				// boolean is implicit
 				"noImplicitBoolean": "off",
 				// disallow inferrable type
 				"noInferrableTypes": "error",
-				// magin is gone
-				"noMagicNumbers": "error",
+				// magic still here
+				"noMagicNumbers": "off",
 				// disallow namespace
 				"noNamespace": "error",
 				// negative to negative is positive
@@ -843,7 +856,7 @@
 			// JSX는 JSX 파일에서만 허용
 			"jsxEverywhere": false
 		},
-		"globals": ["describe", "it", "expect"],
+		"globals": ["describe", "it", "test", "expect", "beforeEach", "afterEach", "beforeAll", "afterAll", "jest", "cy"],
 		"formatter": {
 			// 싱글 따옴표
 			"quoteStyle": "single",
