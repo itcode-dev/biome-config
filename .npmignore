@@ -3,4 +3,5 @@
 
 .gitignore
 .npmignore
+biome.jsonc
 pnpm-lock.yaml
