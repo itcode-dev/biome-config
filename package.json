@@ -5,13 +5,14 @@
 	],
 	"description": "@itcode.dev biome config",
 	"devDependencies": {
-		"@biomejs/biome": "^2.2.0"
+		"@biomejs/biome": "^2.4.15"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"exports": {
-		".": "./src/biome.jsonc"
+		".": "./src/latest/biome.jsonc",
+		"./2.2.0": "./src/2.2.0/biome.jsonc"
 	},
 	"files": [
 		"src/*.jsonc"
