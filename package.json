@@ -1,6 +1,8 @@
 {
 	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
-	"contributors": ["itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"],
+	"contributors": [
+		"itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"
+	],
 	"description": "@itcode.dev biome config",
 	"devDependencies": {
 		"@biomejs/biome": "^2.4.15"
@@ -12,9 +14,16 @@
 		".": "./src/latest/biome.jsonc",
 		"./2.2.0": "./src/2.2.0/biome.jsonc"
 	},
-	"files": ["src/**/*.jsonc"],
+	"files": [
+		"src/**/*.jsonc"
+	],
 	"homepage": "https://github.com/itcode-dev/biome-config",
-	"keywords": ["biome", "config", "lint", "formatter"],
+	"keywords": [
+		"biome",
+		"config",
+		"lint",
+		"formatter"
+	],
 	"license": "Apache-2.0",
 	"main": "src/biome.jsonc",
 	"name": "@itcode-dev/biome-config",
@@ -32,5 +41,5 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"version": "1.0.0"
+	"version": "1.0.1"
 }
