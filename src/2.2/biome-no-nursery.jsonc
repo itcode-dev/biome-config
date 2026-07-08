@@ -1,0 +1,10 @@
+// biome-ignore-all assist/source/useSortedKeys: keep protect document rules sorting
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+	"extends": ["./biome-base.jsonc"],
+	"linter": {
+		"rules": {
+			"nursery": "off"
+		}
+	}
+}
