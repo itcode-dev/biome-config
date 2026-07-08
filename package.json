@@ -1,6 +1,8 @@
 {
 	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
-	"contributors": ["itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"],
+	"contributors": [
+		"itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"
+	],
 	"description": "@itcode.dev biome config",
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.2"
@@ -16,9 +18,16 @@
 		"./2.4/no-nursery": "./src/2.4/biome-no-nursery.jsonc",
 		"./no-nursery": "./src/latest/biome-no-nursery.jsonc"
 	},
-	"files": ["src/**/*.jsonc"],
+	"files": [
+		"src/**/*.jsonc"
+	],
 	"homepage": "https://github.com/itcode-dev/biome-config",
-	"keywords": ["biome", "config", "lint", "formatter"],
+	"keywords": [
+		"biome",
+		"config",
+		"lint",
+		"formatter"
+	],
 	"license": "Apache-2.0",
 	"main": "src/latest/biome-base.jsonc",
 	"name": "@itcode-dev/biome-config",
@@ -36,5 +45,5 @@
 	"scripts": {
 		"test": "biome check"
 	},
-	"version": "1.0.1"
+	"version": "1.1.0"
 }
