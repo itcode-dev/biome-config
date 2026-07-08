@@ -1,31 +1,26 @@
 {
 	"author": "RWB0104 <psj2716@gmail.com> (https://github.com/RWB0104)",
-	"contributors": [
-		"itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"
-	],
+	"contributors": ["itcode.dev <psj2716@gmail.com> (https://github.com/itcode-dev)"],
 	"description": "@itcode.dev biome config",
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.15"
+		"@biomejs/biome": "^2.5.2"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"exports": {
-		".": "./src/latest/biome.jsonc",
-		"./2.2.0": "./src/2.2.0/biome.jsonc"
+		".": "./src/latest/biome-base.jsonc",
+		"./2.2.0": "./src/2.2/biome-base.jsonc",
+		"./2.2.0/no-nursery": "./src/2.2/biome-no-nursery.jsonc",
+		"./2.4": "./src/2.4/biome-base.jsonc",
+		"./2.4/no-nursery": "./src/2.4/biome-no-nursery.jsonc",
+		"./no-nursery": "./src/latest/biome-no-nursery.jsonc"
 	},
-	"files": [
-		"src/**/*.jsonc"
-	],
+	"files": ["src/**/*.jsonc"],
 	"homepage": "https://github.com/itcode-dev/biome-config",
-	"keywords": [
-		"biome",
-		"config",
-		"lint",
-		"formatter"
-	],
+	"keywords": ["biome", "config", "lint", "formatter"],
 	"license": "Apache-2.0",
-	"main": "src/biome.jsonc",
+	"main": "src/latest/biome-base.jsonc",
 	"name": "@itcode-dev/biome-config",
 	"packageManager": "pnpm@10.15.0",
 	"peerDependencies": {
@@ -39,7 +34,7 @@
 		"url": "git+https://github.com/itcode-dev/biome-config.git"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "biome check"
 	},
 	"version": "1.0.1"
 }
